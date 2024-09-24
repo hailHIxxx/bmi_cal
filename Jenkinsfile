@@ -17,9 +17,16 @@ pipeline {
                 git 'https://github.com/hailHIxxx/bmi_cal.git'
             }
         }
-        stage('build') {
+        stage('Clean') {
             steps {
-                bat 'dotnet build C:/Users/MQASTAFF/OneDrive/BmiCal/bmi_calculator/bmi_calculator.csproj'
+                // Clean the specific project
+                bat 'dotnet clean bmi_calculator/bmi_calculator.csproj'
+            }
+        }
+        stage('Build') {
+            steps {
+                // Build the project using a relative path
+                bat 'dotnet build bmi_calculator/bmi_calculator.csproj'
             }
         }
         stage('stage 4') {
