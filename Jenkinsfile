@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                bat 'csc Why.cs'
+                bat 'dotnet build'
             }
         }
         stage('stage 4') {
