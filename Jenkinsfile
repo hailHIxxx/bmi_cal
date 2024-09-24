@@ -19,8 +19,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                dir('C:/Users/MQASTAFF/OneDrive/BmiCal/bmi_calculator.snl')
-                bat 'dotnet build bmi_calculator.sln'
+                bat 'dotnet build C:/Users/MQASTAFF/OneDrive/BmiCal/bmi_calculator.snl'
             }
         }
         stage('stage 4') {
