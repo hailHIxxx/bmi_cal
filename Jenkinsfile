@@ -12,9 +12,14 @@ pipeline {
                 bat 'dotnet --version'
             }
         }
+        stage('checkout') {
+            steps {
+                git 'https://github.com/hailHIxxx/bmi_cal.git'
+            }
+        }
         stage('build') {
             steps {
-                bat 'dotnet build'
+                bat 'dotnet build bmi_calculator.sln'
             }
         }
         stage('stage 4') {
