@@ -20,13 +20,13 @@ pipeline {
         stage('Clean') {
             steps {
                 // Clean the specific project
-                bat 'dotnet clean bmi_calculator/bmi_calculator.csproj'
+                bat 'dotnet clean C:/room/BmiCal/mi_calculator/bmi_calculator.csproj'
             }
         }
         stage('Build') {
             steps {
                 // Build the project using a relative path
-                bat 'dotnet build bmi_calculator/bmi_calculator.csproj'
+                bat 'dotnet C:/room/BmiCal/build bmi_calculator/bmi_calculator.csproj'
             }
         }
         stage('stage 4') {
