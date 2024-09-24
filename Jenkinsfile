@@ -26,7 +26,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the project using a relative path
-                bat 'dotnet C:/room/BmiCal/bmi_calculator/bmi_calculator.csproj'
+                bat 'dotnet build C:/room/BmiCal/bmi_calculator/bmi_calculator.csproj'
             }
         }
         stage('stage 4') {
