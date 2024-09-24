@@ -23,12 +23,12 @@ pipeline {
                 bat 'dotnet clean C:/room/BmiCal/bmi_calculator/bmi_calculator.csproj'
             }
         }
-        stage('Build') {
+        /*stage('Build') {
             steps {
                 // Build the project using a relative path
                 bat 'msbuild C:/room/BmiCal/bmi_calculator/bmi_calculator.csproj'
             }
-        }
+        }*/
         stage('stage 4') {
             steps {
                 echo 'four'
